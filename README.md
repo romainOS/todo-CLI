@@ -1,2 +1,2 @@
 # todo-CLI
-Une app de To-Do List pour les barbus ^^
+A To-Do List app for bearded people
