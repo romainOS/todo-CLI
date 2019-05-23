@@ -125,15 +125,15 @@ int main(int argc, char * argv[]){
     switch(instr){
         case addToText:
             /* on récupère les mots */
-           add(fileName, recup);
+            add(fileName, recup);
            break;
         case list :
             less(fileName);
            break;
         case delFromText:
-            del(fileName, extractLineNumber(argv[3]));
+	    del(fileName, extractLineNumber(argv[3]));
+	   break;
         default:
-            /* corrigeons l'assertion car je ne sait pas d'où vient cette virgule... j'étais vraiment fatigué :D */
             assert(false && "you should never come here");
     }
     /* ... */
