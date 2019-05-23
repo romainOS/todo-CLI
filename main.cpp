@@ -71,7 +71,7 @@ void checkFirstArg(std::string const & str){
 }
 
 void add(std::string file, std::string prm) {
-    std::ofstream monFlux(file, std::ios::out);
+    std::ofstream monFlux(file, std::ios::app);
  
     if(monFlux) {
         monFlux << prm << std::endl;
