@@ -89,7 +89,7 @@ void del(std::string file, int ln) {
         while(std::getline(ReadFile, line)) { //on parcours le fichier et on initialise line à la ligne actuelle
             Line++;
             if(Line != ln) //Si la ligne atteinte est différente de la ligne à supprimer...
-                Buffer += line + "\n"; //On ajoute le contenu de la ligne dans le contenu à réécrire
+	      Buffer += line + "\n"; //On ajoute le contenu de la ligne dans le contenu à réécrire
         }
     } else {
         std::cout << "ERREUR: Impossible d'ouvrir le fichier." << std::endl;
@@ -103,8 +103,10 @@ void less(std::string file) {
     std::ifstream ReadFile(file);
     if(ReadFile) {
         std::string line;
+	int Line = 0;
         while(std::getline(ReadFile, line)) {
-                std::cout << line << std::endl;  // on l'affiche
+	  Line++;
+	  std::cout << Line << ". " << line << std::endl;  // on l'affiche
         }
     } else {
         std::cout << "ERREUR: Impossible d'ouvrir le fichier." << std::endl;
